@@ -10,10 +10,10 @@ const Navbar = () => {
       <div className="rigth">
         <ul>
           <li>
-            <Link to="/collapse">Collapse</Link>
+            <Link to="/icon">Icon</Link>
           </li>
           <li>
-            <Link to="/icon">Icon</Link>
+            <Link to="/collapse">Collapse</Link>
           </li>
           <li>
             <Link to="/loader">Loader</Link>

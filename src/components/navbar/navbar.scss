@@ -1,12 +1,20 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  background-color: darkturquoise;
+  // background-color: darkturquoise;
+  // color: white;
+
+  // background-color: #24292f;
+  // color: #fff;
+
+  // background-color: #20232a;
+  // color: #61dafb;
+
   align-items: center;
   justify-content: space-between;
-  color: white;
-  height: 50px;
-  padding: 0 10px;
+  height: 75px;
+  padding: 0 20px;
+  border-bottom: 1px solid lightgray;
 
   ul {
     list-style: none;
@@ -16,6 +24,13 @@
     a {
       text-decoration: none;
       color: inherit;
+      // font-size: 1rem;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(211, 211, 211, 0.228);
+      }
     }
   }
 }

@@ -1,7 +1,3 @@
-// TODO: Control & Icon needed
-// TODO: Collapse
-// ADDME:
-
 import './collapse.css';
 import React, {
   useState,
@@ -10,9 +6,6 @@ import React, {
   useCallback,
   useReducer,
 } from 'react';
-// import debugLog from "./debugLog";
-
-const debugLog = console.log;
 
 // using let instead of const,
 // experimenting with ES2015 bundle which gets a bit smaller when using let over const.
@@ -80,7 +73,7 @@ function Collapse({
    */
   let onCallback = (callback, params = {}) => {
     if (callback) {
-      debugLog('onCallback ' + callback.name);
+      // de bugLog('onCallback ' + callback.name);
       callback({ state: state.collapse, style: state.style, ...params });
     }
   };
@@ -90,8 +83,6 @@ function Collapse({
 
     // Update state
     state.collapse = COLLAPSED;
-
-    debugLog('setCollapsed');
 
     state.style = {
       height: collapseHeight,
@@ -111,8 +102,6 @@ function Collapse({
 
     // Update state
     state.collapse = COLLAPSING;
-
-    debugLog('setCollapsing');
 
     state.style = {
       height: getElementHeight(),
@@ -144,8 +133,6 @@ function Collapse({
     // Updatetate
     state.collapse = EXPANDING;
 
-    debugLog('setExpanding');
-
     nextFrame(() => {
       if (!elementRef.current) return; // might be redundant
       if (state.collapse !== EXPANDING) return;
@@ -166,8 +153,6 @@ function Collapse({
     // Update state
     state.collapse = EXPANDED;
 
-    debugLog('setExpanded');
-
     state.style = {
       height: '',
       visibility: '',
@@ -186,7 +171,7 @@ function Collapse({
     if (target === elementRef.current && propertyName === 'height') {
       let styleHeight = target.style.height;
 
-      debugLog('onTransitionEnd', state.collapse, propertyName, styleHeight);
+      // deb ugLog('onTransitionEnd', state.collapse, propertyName, styleHeight);
 
       switch (state.collapse) {
         case EXPANDING:
@@ -237,7 +222,7 @@ function Collapse({
       if (node) {
         elementRef.current = node;
         onCallback(onInit, { node });
-        debugLog('callback ref');
+        // deb ugLog('callback ref');
       }
     },
     [elementType]
@@ -246,8 +231,6 @@ function Collapse({
   let collapseClassName = addState
     ? `${className} --c-${state.collapse}`
     : className;
-
-  debugLog('Render');
 
   return (
     <ElementType

@@ -15,9 +15,9 @@ const CollapsePage = () => {
       <h1> Collapse </h1>
 
       <div className="items">
-        {[...Array(5).keys()].map(() => {
+        {[...Array(5).keys()].map((a, idx) => {
           return (
-            <div className="item">
+            <div key={idx} className="item">
               <button onClick={handleMe}>open</button>
               <button onClick={handleMe}>close</button>
 

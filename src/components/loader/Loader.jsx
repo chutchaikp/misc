@@ -65,8 +65,12 @@ export default function Loader({ type }) {
       <span className="customText">Loading...</span>
     </div>
   );
-  debugger;
-  if (type === 'feed') return Array(COUNTER).fill(<FeedSkeleton />);
+
+  // if (type === 'feed') return Array(COUNTER).fill(<FeedSkeleton />);
+  if (type === 'feed')
+    return Array.from(Array(8).keys()).map((x, idx) => (
+      <FeedSkeleton key={idx} />
+    ));
   if (type === 'top') return <TopSkeleton />;
   if (type === 'menu') return <MenuSkeleton />;
   if (type === 'circle') return <Circle />;

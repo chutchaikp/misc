@@ -1,0 +1,28 @@
+.icon {
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .iconGoogle {
+      color: red;
+      font-size: 100px;
+      // background-color: rgb(148, 249, 249);
+    }
+    .iconFacebook {
+      color: blue;
+      font-size: 88px;
+    }
+    .iconGithub {
+      font-size: 88px;
+    }
+  }
+}
