@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  .iconGoogle {
+    color: red;
+    background-color: rgb(148, 249, 249);
+  }
+  .iconFacebook {
+    color: blue;
+    font-size: 55px;
+  }
+}

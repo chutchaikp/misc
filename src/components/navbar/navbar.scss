@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: darkturquoise;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 50px;
+  padding: 0 10px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.collapsePage {
+  margin: 0 100px;
+  padding: 10px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #555;
+
+  h1 {
+    padding: 20px 0 0;
+    color: #666;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item {
+      width: 350px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .content {
+    line-height: 30px;
+  }
+}
