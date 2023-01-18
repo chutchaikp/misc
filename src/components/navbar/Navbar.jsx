@@ -24,6 +24,18 @@ const Navbar = () => {
           <li>
             <Link to="/ellipsis">Ellipsis</Link>
           </li>
+          <li>
+            <Link to="/buttongroup">Button Group</Link>
+          </li>
+          <li>
+            <Link to="/form">Form</Link>
+          </li>
+          <li>
+            <Link to="/radio">Radio</Link>
+          </li>
+          <li>
+            <Link to="/transition">Transition</Link>
+          </li>
         </ul>
       </div>
     </div>

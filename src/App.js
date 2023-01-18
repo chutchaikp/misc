@@ -9,6 +9,10 @@ import LoaderPage from './pages/LoaderPage'
 import Wrap from './pages/Wrap'
 
 import './app.scss'
+import ButtonGroupPage from './pages/ButtonGroupPage'
+import FormPage from './pages/FormPage'
+import { RadioPage } from './pages/RadioPage'
+import Transition from './pages/Transition'
 
 const App = () => {
 	return (
@@ -22,6 +26,10 @@ const App = () => {
 					<Route path="/loader" element={<LoaderPage />}></Route>
 					<Route path="/wrap" element={<Wrap />}></Route>
 					<Route path="/ellipsis" element={<Ellipsis />}></Route>
+					<Route path="/buttongroup" element={<ButtonGroupPage />}></Route>
+					<Route path="/form" element={<FormPage />}></Route>
+					<Route path="/radio" element={<RadioPage />}></Route>
+					<Route path="/transition" element={<Transition />}></Route>
 				</Routes>
 			</div>
 		</BrowserRouter>
