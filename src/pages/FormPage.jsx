@@ -1,18 +1,7 @@
-// import React from 'react';
-
-// // TODO: learn form hook
-// //
-
-// import './formPage.scss';
-
-// const FormPage = () => {
-//   return <div className="form-page">xxxx</div>;
-// };
-
-// export default FormPage;
-
 import React from 'react';
 import { useForm } from 'react-hook-form';
+
+import './formPage.scss';
 
 export default function FormPage() {
   const {
@@ -20,54 +9,33 @@ export default function FormPage() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type="text"
-        placeholder="First name"
-        {...register('First name', { required: true, maxLength: 80 })}
-      />
-      <input
-        type="text"
-        placeholder="Last name"
-        {...register('Last name', { required: true, maxLength: 100 })}
-      />
-      <input
-        type="text"
-        placeholder="Email"
-        {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
-      />
-      <input
-        type="tel"
-        placeholder="Mobile number"
-        {...register('Mobile number', {
-          required: true,
-          minLength: 6,
-          maxLength: 12,
-        })}
-      />
-      <select {...register('Title', { required: true })}>
-        <option value="Mr">Mr</option>
-        <option value="Mrs">Mrs</option>
-        <option value="Miss">Miss</option>
-        <option value="Dr">Dr</option>
-      </select>
+    <div className="form-page">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <label htmlFor="firstName">First Name</label>
+          <input
+            className={errors.firstName ? 'error' : ''}
+            placeholder="bill"
+            {...register('firstName', { required: true })}
+          />
+        </div>
 
-      <input
-        {...register('Developer', { required: true })}
-        type="radio"
-        value="Yes"
-      />
-      <input
-        {...register('Developer', { required: true })}
-        type="radio"
-        value="No"
-      />
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            className={errors.email ? 'error' : ''}
+            placeholder="luo@gmail.com"
+            {...register('email', { required: true })}
+          />
+        </div>
 
-      <input type="submit" />
-    </form>
+        <input type="submit" />
+      </form>
+    </div>
   );
 }
