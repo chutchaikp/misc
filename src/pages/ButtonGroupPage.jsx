@@ -1,5 +1,3 @@
-// TODO: https://codepen.io/avstorm/pen/eYNLwVd
-
 import React from 'react';
 
 import './buttonGroupPage.scss';

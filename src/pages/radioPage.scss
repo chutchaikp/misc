@@ -1,9 +1,6 @@
 $primary: #6743ee;
 $seconday: #31bbf7;
 
-@mixin setLabel($bg) {
-}
-
 .radio-page {
   height: 55vh;
   display: flex;
@@ -43,10 +40,8 @@ $seconday: #31bbf7;
       }
     }
     label {
-      // background-color: rgb(212, 3, 3);
       font-family: Arial;
       cursor: pointer;
-      // color: white;
       padding: 10px 20px;
       transition: background-color 0.2s ease-in-out;
 
@@ -74,10 +69,6 @@ $seconday: #31bbf7;
   }
 }
 
-// input {
-//   display: none;
-//   margin-left: 20px !important;
-// }
 .green {
   border: 1px solid green;
 }
