@@ -14,6 +14,15 @@ import FormPage from './pages/FormPage'
 import { RadioPage } from './pages/RadioPage'
 import Transition from './pages/Transition'
 
+import CustomControlPage from './pages/CustomControlPage'
+import ListGroupPage from './pages/ListGroupPage'
+
+const App2 = () => {
+	return (
+		<ListGroupPage />
+	)
+}
+
 const App = () => {
 	return (
 		<BrowserRouter>
@@ -30,6 +39,9 @@ const App = () => {
 					<Route path="/form" element={<FormPage />}></Route>
 					<Route path="/radio" element={<RadioPage />}></Route>
 					<Route path="/transition" element={<Transition />}></Route>
+
+					<Route path="/custom" element={<CustomControlPage />}></Route>
+					<Route path="/listgroup" element={<ListGroupPage />}></Route>
 				</Routes>
 			</div>
 		</BrowserRouter>

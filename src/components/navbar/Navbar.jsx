@@ -36,6 +36,12 @@ const Navbar = () => {
           <li>
             <Link to="/transition">Transition</Link>
           </li>
+          <li>
+            <Link to="/custom">Controls</Link>
+          </li>
+          <li>
+            <Link to="/listgroup">ListGroup</Link>
+          </li>
         </ul>
       </div>
     </div>

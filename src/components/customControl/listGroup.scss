@@ -1,0 +1,22 @@
+.list-group {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+
+  margin: 0;
+  padding: 0;
+  gap: 0;
+
+  li {
+    display: block;
+    border: 1px solid lightgray;
+    border-top-width: 0;
+    padding: 0.5rem 1rem;
+
+    &:first-of-type {
+      border-top-width: 1px;
+    }
+  }
+}

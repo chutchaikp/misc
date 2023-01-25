@@ -1,0 +1,53 @@
+.custom-control-page {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-blue {
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid teal;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: rgb(1, 105, 105);
+    // color: black;
+  }
+}
+
+.button-purple {
+  padding: 15px 20px;
+  background-color: purple;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid purple;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: rgb(91, 1, 91);
+  }
+}
+
+.button-red {
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: rgb(172, 5, 5);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid rgb(172, 5, 5);
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: rgb(128, 3, 3);
+  }
+}
