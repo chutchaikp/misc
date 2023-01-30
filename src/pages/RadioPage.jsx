@@ -8,8 +8,7 @@ export const RadioPage = () => {
       <div className="radio-toolbar">
         <input type="radio" id="radio1" name="radios" value="all" />
         <label className="green" for="radio1">
-          {' '}
-          All{' '}
+          All
         </label>
 
         <input type="radio" id="radio2" name="radios" value="open" />

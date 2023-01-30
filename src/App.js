@@ -16,14 +16,44 @@ import Transition from './pages/Transition'
 
 import CustomControlPage from './pages/CustomControlPage'
 import ListGroupPage from './pages/ListGroupPage'
+import Buttonx from './components/buttonxGroup/Buttonx'
 
-const App2 = () => {
+const App = () => {
 	return (
-		<ListGroupPage />
+		<div>
+
+			<div className="button-group">
+				<input type="radio" id="radio1" name="radios" value="all" />
+				<label className="green" for="radio1">
+					All
+				</label>
+
+				<input type="radio" id="radio2" name="radios" value="open" />
+				<label className="green" for="radio2">
+					Open
+				</label>
+
+				<input type="radio" id="radio4" name="radios" value="other" />
+				<label className="green" for="radio4">
+					Other
+				</label>
+
+				<input type="radio" id="radio3" name="radios" value="true" />
+				<label className="red" for="radio3">
+					Archived
+				</label>
+
+				<input type="radio" id="radio5" name="radios" value="5" />
+				<label className="red" for="radio5">
+					Another one
+				</label>
+			</div>
+
+		</div>
 	)
 }
 
-const App = () => {
+const Appxx = () => {
 	return (
 		<BrowserRouter>
 			<div className='app'>
