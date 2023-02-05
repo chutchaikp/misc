@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, createBrowserRouter, Outlet, Route, RouterProvider, Routes } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
 import CollapsePage from './pages/CollapsePage'
 import Ellipsis from './pages/Ellipsis'
@@ -17,8 +17,30 @@ import Transition from './pages/Transition'
 import CustomControlPage from './pages/CustomControlPage'
 import ListGroupPage from './pages/ListGroupPage'
 import Buttonx from './components/buttonxGroup/Buttonx'
+import ShowHide from './pages/ShowHide'
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <div className='app'>
+			<Navbar />
+			<Outlet />
+		</div>,
+		children: [
+			{ path: '/', element: <ShowHide /> },
+			{ path: '/collapse', element: <CollapsePage /> },
+			{ path: '/showhide', element: <ShowHide /> },
+		]
+	}
+])
 
 const App = () => {
+	return (
+		<RouterProvider router={router} />
+	)
+}
+
+const AppYY = () => {
 	return (
 		<div>
 

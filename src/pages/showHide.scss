@@ -1,0 +1,27 @@
+.showHide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  font-size: 3rem;
+
+  .btn {
+    cursor: pointer;
+  }
+  .item {
+    transition: all 1s ease;
+  }
+
+  // effect only next sib
+  // -----------------------------
+  // .btn:hover + .item {
+  //   opacity: 0;
+  // }
+
+  // effect all .item
+  // -----------------------------
+  .btn:hover ~ .item {
+    opacity: 0;
+  }
+}
