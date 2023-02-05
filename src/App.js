@@ -18,6 +18,7 @@ import CustomControlPage from './pages/CustomControlPage'
 import ListGroupPage from './pages/ListGroupPage'
 import Buttonx from './components/buttonxGroup/Buttonx'
 import ShowHide from './pages/ShowHide'
+import DataGridPage from './pages/DataGridPage'
 
 const router = createBrowserRouter([
 	{
@@ -28,8 +29,10 @@ const router = createBrowserRouter([
 		</div>,
 		children: [
 			{ path: '/', element: <ShowHide /> },
+			{ path: '/datagrid', element: <DataGridPage /> },
 			{ path: '/collapse', element: <CollapsePage /> },
 			{ path: '/showhide', element: <ShowHide /> },
+			{ path: '/datagrid', element: <DataGridPage /> },
 		]
 	}
 ])

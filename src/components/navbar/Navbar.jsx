@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './navbar.scss';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="navbar">
-      <div className="left">LOGO</div>
-      <div className="rigth">
+      <div className="left">
+        <Link to="/">😷</Link>
+      </div>
+      <div className="right">
         <ul>
           <li>
             <Link to="/icon">Icon</Link>
@@ -41,6 +45,12 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/listgroup">ListGroup</Link>
+          </li>
+          <li>
+            <Link to="/showhide">Show/Hide</Link>
+          </li>
+          <li>
+            <Link to="/datagrid">DataGrid</Link>
           </li>
         </ul>
       </div>
