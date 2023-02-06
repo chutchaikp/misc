@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Button from '../components/buttonGroup/Button';
-import ButtonGroup from '../components/buttonGroup/ButtonGroup';
+import Button from '../../components/buttonGroup/Button';
+import ButtonGroup from '../../components/buttonGroup/ButtonGroup';
 
 import './buttonGroupPage.scss';
 

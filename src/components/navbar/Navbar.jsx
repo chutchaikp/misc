@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="left">
-        <Link to="/">😷</Link>
+        <Link to="/">Ⓜ️isc</Link>
       </div>
       <div className="right">
         <ul>
@@ -51,6 +51,12 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/datagrid">DataGrid</Link>
+          </li>
+          <li>
+            <Link to="/img">ImgUpload</Link>
+          </li>
+          <li>
+            <Link to="/dotenv">.env</Link>
           </li>
         </ul>
       </div>

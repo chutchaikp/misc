@@ -19,6 +19,8 @@ import ListGroupPage from './pages/ListGroupPage'
 import Buttonx from './components/buttonxGroup/Buttonx'
 import ShowHide from './pages/ShowHide'
 import DataGridPage from './pages/DataGridPage'
+import ImageUpload from './pages/ImgUpload'
+import DotENV from './pages/DotENV'
 
 const router = createBrowserRouter([
 	{
@@ -33,6 +35,8 @@ const router = createBrowserRouter([
 			{ path: '/collapse', element: <CollapsePage /> },
 			{ path: '/showhide', element: <ShowHide /> },
 			{ path: '/datagrid', element: <DataGridPage /> },
+			{ path: '/img', element: <ImageUpload /> },
+			{ path: '/dotenv', element: <DotENV /> },
 		]
 	}
 ])

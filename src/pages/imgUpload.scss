@@ -1,0 +1,62 @@
+.imgUpload {
+  display: flex;
+  height: 88vh;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    width: 555px;
+    display: flex;
+
+    .left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .camera {
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(215, 215, 215);
+        border-radius: 50%;
+
+        img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .img > label {
+        font-size: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .img > button {
+        border: none;
+        font-size: 33px;
+        padding: 10px 50px;
+        color: white;
+        background-color: turquoise;
+        margin-top: 20px;
+        letter-spacing: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+input[type='file'] {
+  display: none;
+}
