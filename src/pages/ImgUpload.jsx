@@ -36,7 +36,6 @@ const ImgUpload = () => {
       console.log(url);
 
       if (url) {
-        alert('ok');
         setImgUrl(url);
       }
 
@@ -77,8 +76,8 @@ const ImgUpload = () => {
               <MdDriveFolderUpload size={55} />
             </label>
             <input type="file" id="file1" onChange={onImgChange} />
-            <button onClick={handleUpload}>
-              {loading ? <>...</> : <>UPLOAD</>}
+            <button className={loading ? 'loading' : ''} onClick={handleUpload}>
+              UPLOAD
             </button>
           </div>
         </div>

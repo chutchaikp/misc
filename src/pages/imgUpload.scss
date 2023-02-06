@@ -22,13 +22,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(215, 215, 215);
+        background-color: rgba(234, 233, 233, 0.332);
         border-radius: 50%;
 
         img {
-          width: 150px;
-          height: 150px;
+          width: 250px;
+          height: 250px;
           object-fit: cover;
+          border-radius: 50%;
         }
       }
     }
@@ -48,8 +49,8 @@
       }
       .img > button {
         border: none;
-        font-size: 33px;
-        padding: 10px 50px;
+        font-size: 30px;
+        padding: 10px;
         color: white;
         background-color: turquoise;
         margin-top: 20px;
@@ -57,10 +58,32 @@
         cursor: pointer;
         width: 255px;
       }
+      .img > button.loading:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+        animation: ellipsis steps(4, end) 900ms infinite;
+        content: '\2026';
+        /* ascii code for the ellipsis character */
+        width: 0px;
+      }
     }
   }
 }
 
 input[type='file'] {
   display: none;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 40px;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 40px;
+  }
 }
