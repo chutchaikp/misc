@@ -6,6 +6,8 @@ import './imgUpload.scss';
 
 const ImgUpload = () => {
   const [file, setFile] = useState('');
+  const [imgUrl, setImgUrl] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const onImgChange = (e) => {
     e.preventDefault();
@@ -14,6 +16,7 @@ const ImgUpload = () => {
 
   const handleUpload = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       debugger;
       const fileName = file.name;
@@ -25,13 +28,21 @@ const ImgUpload = () => {
       );
       data.append('multiple', true);
       data.append('tags', fileName);
-      data.appendfield('context', `photo=${fileName}`);
+      data.append('context', `photo=${fileName}`);
       const cloudinary_url = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/upload`;
       // const fileName = file.name;
       const uploadRes = await axios.post(cloudinary_url, data);
       const { url } = uploadRes.data;
       console.log(url);
+
+      if (url) {
+        alert('ok');
+        setImgUrl(url);
+      }
+
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       debugger;
     }
   };
@@ -66,10 +77,14 @@ const ImgUpload = () => {
               <MdDriveFolderUpload size={55} />
             </label>
             <input type="file" id="file1" onChange={onImgChange} />
-            <button onClick={handleUpload}>UPLOAD</button>
+            <button onClick={handleUpload}>
+              {loading ? <>...</> : <>UPLOAD</>}
+            </button>
           </div>
         </div>
       </div>
+
+      <div>{imgUrl && <>{imgUrl}</>}</div>
     </div>
   );
 };

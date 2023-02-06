@@ -58,6 +58,9 @@ const Navbar = () => {
           <li>
             <Link to="/dotenv">.env</Link>
           </li>
+          <li>
+            <Link to="/loading">.loading</Link>
+          </li>
         </ul>
       </div>
     </div>

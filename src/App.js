@@ -21,6 +21,7 @@ import ShowHide from './pages/ShowHide'
 import DataGridPage from './pages/DataGridPage'
 import ImageUpload from './pages/ImgUpload'
 import DotENV from './pages/DotENV'
+import Loading from './pages/Loading'
 
 const router = createBrowserRouter([
 	{
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
 			{ path: '/datagrid', element: <DataGridPage /> },
 			{ path: '/img', element: <ImageUpload /> },
 			{ path: '/dotenv', element: <DotENV /> },
+			{ path: '/loading', element: <Loading /> },
 		]
 	}
 ])

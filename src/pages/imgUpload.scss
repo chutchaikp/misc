@@ -1,5 +1,7 @@
 .imgUpload {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   height: 88vh;
   justify-content: center;
   align-items: center;
@@ -42,6 +44,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
       }
       .img > button {
         border: none;
@@ -52,6 +55,7 @@
         margin-top: 20px;
         letter-spacing: 3px;
         cursor: pointer;
+        width: 255px;
       }
     }
   }

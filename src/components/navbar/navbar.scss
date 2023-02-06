@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  background-color: turquoise;
+  // background-color: turquoise;
   // color: white;
 
   // background-color: #24292f;
@@ -36,9 +36,10 @@
         text-decoration: none;
         color: inherit;
         font-size: 1rem;
-        font-weight: bold;
+        // font-weight: bold;
         padding: 10px;
         border-radius: 5px;
+        // color: white;
 
         &:hover {
           background-color: rgba(211, 211, 211, 0.228);
