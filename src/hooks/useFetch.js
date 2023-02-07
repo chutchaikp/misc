@@ -8,16 +8,10 @@ const useFetch = (url) => {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			setLoading(true);
 			try {
+				setLoading(true);
 				const res = await axios.get(url);
 				setData(res.data);
-				// const data = [
-				// 	{ id: 1, name: 'Leanne Graham', username: 'Bret', },
-				// 	{ id: 2, name: 'Ervin Howell', username: 'Antonette', },
-				// 	{ id: 3, name: 'Clementine Bauch', username: 'Samantha	', },
-				// ]
-				// setData(data)
 			} catch (err) {
 				setError(err);
 			}
@@ -27,7 +21,12 @@ const useFetch = (url) => {
 	}, [url]);
 
 	const reFetch = async () => {
+
 		setLoading(true);
+
+		// test long request
+		await new Promise(r => setTimeout(r, 5000));
+
 		try {
 			const res = await axios.get(url);
 			setData(res.data);

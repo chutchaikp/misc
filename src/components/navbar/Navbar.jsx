@@ -61,6 +61,9 @@ const Navbar = () => {
           <li>
             <Link to="/loading">.loading</Link>
           </li>
+          <li>
+            <Link to="/hook">Custom Hook</Link>
+          </li>
         </ul>
       </div>
     </div>

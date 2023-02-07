@@ -22,6 +22,7 @@ import DataGridPage from './pages/DataGridPage'
 import ImageUpload from './pages/ImgUpload'
 import DotENV from './pages/DotENV'
 import Loading from './pages/Loading'
+import CustomHook from './pages/CustomHook'
 
 const router = createBrowserRouter([
 	{
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
 			{ path: '/img', element: <ImageUpload /> },
 			{ path: '/dotenv', element: <DotENV /> },
 			{ path: '/loading', element: <Loading /> },
+			{ path: '/hook', element: <CustomHook /> },
 		]
 	}
 ])
