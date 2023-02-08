@@ -41,6 +41,7 @@ const router = createBrowserRouter([
 			{ path: '/dotenv', element: <DotENV /> },
 			{ path: '/loading', element: <Loading /> },
 			{ path: '/hook', element: <CustomHook /> },
+			{ path: '/form', element: <FormPage /> },
 		]
 	}
 ])

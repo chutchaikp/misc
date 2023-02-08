@@ -31,9 +31,7 @@ const Navbar = () => {
           <li>
             <Link to="/buttongroup">Button Group</Link>
           </li>
-          <li>
-            <Link to="/form">Form</Link>
-          </li>
+
           <li>
             <Link to="/radio">Radio</Link>
           </li>
@@ -63,6 +61,10 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/hook">Custom Hook</Link>
+          </li>
+
+          <li>
+            <Link to="/form">Form</Link>
           </li>
         </ul>
       </div>
