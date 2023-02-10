@@ -4,7 +4,7 @@ import './radioPage.scss';
 
 export const RadioPage = () => {
   return (
-    <div className="radio-page">
+    <div className="radioPage">
       <div className="radio-toolbar">
         <input type="radio" id="radio1" name="radios" value="all" />
         <label className="green" for="radio1">

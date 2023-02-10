@@ -42,6 +42,9 @@ const router = createBrowserRouter([
 			{ path: '/loading', element: <Loading /> },
 			{ path: '/hook', element: <CustomHook /> },
 			{ path: '/form', element: <FormPage /> },
+			{ path: '/buttongroup', element: <ButtonGroupPage /> },
+			{ path: '/radio', element: <RadioPage /> },
+
 		]
 	}
 ])
