@@ -66,6 +66,9 @@ const Navbar = () => {
           <li>
             <Link to="/form">Form</Link>
           </li>
+          <li>
+            <Link to="/dynamicform">Dynamic Form</Link>
+          </li>
         </ul>
       </div>
     </div>

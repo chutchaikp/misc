@@ -1,0 +1,29 @@
+.dynamicForm {
+  padding: 150px;
+  padding-top: 20px;
+
+  form {
+    padding-bottom: 50px;
+  }
+
+  form > fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  form > .btn {
+    display: flex;
+    justify-content: center;
+  }
+  form > section > ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}

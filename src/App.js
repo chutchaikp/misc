@@ -23,6 +23,7 @@ import ImageUpload from './pages/ImgUpload'
 import DotENV from './pages/DotENV'
 import Loading from './pages/Loading'
 import CustomHook from './pages/CustomHook'
+import DynamicForm from './pages/DynamicForm.js'
 
 const router = createBrowserRouter([
 	{
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
 			{ path: '/form', element: <FormPage /> },
 			{ path: '/buttongroup', element: <ButtonGroupPage /> },
 			{ path: '/radio', element: <RadioPage /> },
+			{ path: '/dynamicform', element: <DynamicForm /> },
 
 		]
 	}
