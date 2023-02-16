@@ -24,6 +24,9 @@ import DotENV from './pages/DotENV'
 import Loading from './pages/Loading'
 import CustomHook from './pages/CustomHook'
 import DynamicForm from './pages/DynamicForm.js'
+import Design from './pages/Design.js'
+import Drawer from './pages/Drawer.js'
+
 
 const router = createBrowserRouter([
 	{
@@ -46,6 +49,8 @@ const router = createBrowserRouter([
 			{ path: '/buttongroup', element: <ButtonGroupPage /> },
 			{ path: '/radio', element: <RadioPage /> },
 			{ path: '/dynamicform', element: <DynamicForm /> },
+			{ path: '/design', element: <Design /> },
+			{ path: '/drawer', element: <Drawer /> },
 
 		]
 	}
