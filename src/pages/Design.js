@@ -5,6 +5,8 @@ import Img1 from '../images/design1.png'
 import Img2 from '../images/design2.png'
 import Img3 from '../images/design3.png'
 
+import Pic1 from '../images/pic.jpeg'
+
 import './design.scss';
 const Design = () => {
 	return (
@@ -21,7 +23,10 @@ const Design = () => {
 				<div className="box">
 					<img src={Img1} alt="" />
 					<div className="wrapper">
-						<p className="course">COURSE</p>
+						<p className="course">
+							<img src={Pic1} alt="" />
+							COURSE
+						</p>
 						<p className="title">Grokking the Behavioral Interview</p>
 
 						<div className="foot">
