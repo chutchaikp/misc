@@ -26,7 +26,8 @@ import CustomHook from './pages/CustomHook'
 import DynamicForm from './pages/DynamicForm.js'
 import Design from './pages/Design.js'
 import Drawer from './pages/Drawer.js'
-
+import TestPage from './pages/TestPage.jsx'
+import Selector from './pages/Selector.jsx'
 
 const router = createBrowserRouter([
 	{
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
 			{ path: '/dynamicform', element: <DynamicForm /> },
 			{ path: '/design', element: <Design /> },
 			{ path: '/drawer', element: <Drawer /> },
+			{ path: '/listgroup', element: <ListGroupPage /> },
+			{ path: '/custom', element: <CustomControlPage /> },
+			{ path: '/transition', element: <Transition /> },
+			{ path: '/test', element: <TestPage /> },
+			{ path: '/selector', element: <Selector /> },
 
 		]
 	}

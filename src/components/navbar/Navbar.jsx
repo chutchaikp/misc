@@ -75,6 +75,9 @@ const Navbar = () => {
           <li>
             <Link to="/drawer">Drawer</Link>
           </li>
+          <li>
+            <Link to="/selector">Selector</Link>
+          </li>
         </ul>
       </div>
     </div>
