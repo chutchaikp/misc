@@ -17,10 +17,14 @@ const CustomHook = () => {
 
   return (
     <div className="customHook">
-      <h2 className={loading ? 'loading' : ' '}> CustomHook </h2>
-      <button onClick={handleClick}>REFRESH</button>
+      <h2 className={loading ? 'loading' : ''}> CustomHook </h2>
+      <button disabled={loading ? true : false} onClick={handleClick}>
+        REFRESH
+      </button>
 
-      <div className="result">{data && !loading && <>OK</>}</div>
+      <div className={loading ? 'result-waiting' : 'result'}>
+        {loading ? <>WAITING</> : <>OK</>}
+      </div>
     </div>
   );
 };

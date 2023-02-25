@@ -7,11 +7,21 @@
 
   button {
     letter-spacing: 10px;
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    background-color: rebeccapurple;
   }
 
   .result {
     font-size: 55px;
     color: turquoise;
+    margin-top: 10px;
+  }
+  .result-waiting {
+    font-size: 55px;
+    color: rgb(128, 128, 128);
     margin-top: 10px;
   }
 }
@@ -20,7 +30,7 @@
   overflow: hidden;
   display: inline-block;
   vertical-align: bottom;
-  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  // -webkit-animation: ellipsis steps(4, end) 900ms infinite;
   animation: ellipsis steps(4, end) 900ms infinite;
   content: '\2026';
   /* ascii code for the ellipsis character */
@@ -32,9 +42,8 @@
     width: 40px;
   }
 }
-
-@-webkit-keyframes ellipsis {
-  to {
-    width: 40px;
-  }
-}
+// @-webkit-keyframes ellipsis {
+//   to {
+//     width: 40px;
+//   }
+// }
