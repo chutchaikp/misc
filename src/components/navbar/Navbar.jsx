@@ -78,6 +78,9 @@ const Navbar = () => {
           <li>
             <Link to="/selector">Selector</Link>
           </li>
+          <li>
+            <Link to="/datagridex">DataGridEx</Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,13 +1,19 @@
+// export default DataGridEx;
+
 import React, { useEffect, useState } from 'react';
 import SortArrow from '../components/SortArrow';
 import useFetch from '../hooks/useFetch';
 
-import './dataGridPage.scss';
+import './dataGridEx.scss';
 
-const DataGridPage = () => {
+const DataGridEx = () => {
   const [customData, setCustomData] = useState([]);
   const [sort, setSort] = useState({ by: 'id', direction: 'a' }); // { by, direction }
   const [columns, setColumns] = useState([]);
+
+  const [isCheckAll, setIsCheckAll] = useState();
+
+  const [selectIds, setSelectIds] = useState('');
 
   const { data, loading, error } = useFetch(
     'https://jsonplaceholder.typicode.com/users'
@@ -18,11 +24,11 @@ const DataGridPage = () => {
       if (data && data.length > 0) {
         const res = data.map((d) => {
           const { address, company, ...other } = d;
-          return { ...other };
+          return { ...other, isCheck: false };
         });
 
         // const cols = Object.keys(res[0]);
-        const hideCols = ['id', 'website'];
+        const hideCols = ['id', 'website', 'isCheck'];
         const cols = Object.keys(res[0]).map((c) => {
           if (hideCols.indexOf(c) >= 0) {
             return { name: c, isHide: true };
@@ -37,6 +43,19 @@ const DataGridPage = () => {
       throw error;
     }
   }, [data]);
+
+  useEffect(() => {
+    debugger;
+    const _res = customData.filter((d) => d.isCheck);
+    const _selectIds = _res.map((r) => r.id);
+    setSelectIds(JSON.stringify(_selectIds));
+
+    if (_res.length === customData.length) {
+      setIsCheckAll(true);
+    } else {
+      setIsCheckAll(false);
+    }
+  }, [customData]);
 
   const handleSort = (by) => {
     try {
@@ -62,17 +81,58 @@ const DataGridPage = () => {
       debugger;
     }
   };
+  const onCheck = (u, isCheck) => {
+    try {
+      debugger;
+      setCustomData((prev) => {
+        return prev.map((c) => {
+          if (c.id === u.id) {
+            return { ...c, isCheck };
+          }
+          return { ...c };
+        });
+      });
+    } catch (error) {
+      debugger;
+    }
+  };
+  const onCheckAll = () => {
+    if (isCheckAll === true) {
+      setCustomData((prev) => {
+        return prev.map((c) => {
+          return { ...c, isCheck: false };
+        });
+      });
+      return;
+    }
+    setCustomData((prev) => {
+      return prev.map((c) => {
+        return { ...c, isCheck: true };
+      });
+    });
+  };
 
-  console.log('rendering Sort ' + new Date().toISOString());
+  console.log('rendering DataGridExtender ' + new Date().toISOString());
 
   return (
-    <div className="sort">
+    <div className="dataGridEx">
       <h1> User {JSON.stringify(sort)} </h1>
+      <h1> {selectIds} </h1>
       {customData && customData.length > 0 ? (
         <>
           <table>
             <thead>
               <tr>
+                <td>
+                  <input
+                    checked={isCheckAll}
+                    type="checkbox"
+                    onChange={(e) => {
+                      e.preventDefault();
+                      onCheckAll();
+                    }}
+                  />
+                </td>
                 {columns.map((c) => {
                   return (
                     <td
@@ -103,6 +163,17 @@ const DataGridPage = () => {
               {customData.map((u, _idx) => {
                 return (
                   <tr key={_idx}>
+                    <td>
+                      <input
+                        type="checkbox"
+                        checked={u.isCheck}
+                        onChange={(e) => {
+                          debugger;
+                          e.preventDefault();
+                          onCheck(u, e.target.checked);
+                        }}
+                      />
+                    </td>
                     {columns.map((c, idx) => {
                       const key = 'x' + c.name + idx;
                       return (
@@ -127,4 +198,4 @@ const DataGridPage = () => {
     </div>
   );
 };
-export default React.memo(DataGridPage);
+export default React.memo(DataGridEx);

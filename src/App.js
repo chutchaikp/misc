@@ -28,6 +28,7 @@ import Design from './pages/Design.js'
 import Drawer from './pages/Drawer.js'
 import TestPage from './pages/TestPage.jsx'
 import Selector from './pages/Selector.jsx'
+import DataGridEx from './pages/DataGridEx.jsx'
 
 const router = createBrowserRouter([
 	{
@@ -57,6 +58,7 @@ const router = createBrowserRouter([
 			{ path: '/transition', element: <Transition /> },
 			{ path: '/test', element: <TestPage /> },
 			{ path: '/selector', element: <Selector /> },
+			{ path: '/datagridex', element: <DataGridEx /> },
 
 		]
 	}
