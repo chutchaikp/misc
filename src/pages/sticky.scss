@@ -1,0 +1,16 @@
+.sticky {
+  flex: 1;
+  // height: 300vh;
+  display: flex;
+
+  h1 {
+    flex: 1;
+    padding: 20px 50px;
+    position: sticky;
+    height: 100%;
+    top: 20px;
+  }
+  p {
+    line-height: 1.75;
+  }
+}

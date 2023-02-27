@@ -1,0 +1,29 @@
+.hover {
+  .card {
+    width: 280px;
+
+    .images {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover {
+        .secondImg {
+          z-index: 2;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+      }
+      .firstImg {
+        z-index: 1;
+      }
+    }
+  }
+}

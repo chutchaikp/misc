@@ -81,6 +81,12 @@ const Navbar = () => {
           <li>
             <Link to="/datagridex">DataGridEx</Link>
           </li>
+          <li>
+            <Link to="/sticky">Sticky</Link>
+          </li>
+          <li>
+            <Link to="/hover">Hover</Link>
+          </li>
         </ul>
       </div>
     </div>
