@@ -1,0 +1,53 @@
+.my-slider {
+  display: flex;
+  padding: 50px;
+  background-color: rgba(0, 0, 255, 0.149);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    width: 900px;
+    background-color: rgba(255, 255, 0, 0.318);
+    overflow: hidden;
+    display: flex;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      gap: 0;
+      li {
+        .product {
+          width: 300px;
+          background-color: aqua;
+          // ok
+          box-sizing: border-box;
+          padding: 20px;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .carousel {
+    .slider-wrapper {
+      .slider {
+        .slide {
+          div {
+            img {
+              width: 200px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

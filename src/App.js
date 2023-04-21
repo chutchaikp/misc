@@ -31,6 +31,9 @@ import Selector from './pages/Selector.jsx'
 import DataGridEx from './pages/DataGridEx.jsx'
 import Sticky from './pages/Sticky.jsx'
 import Hover from './pages/Hover.jsx'
+import MySlider from './pages/MySlider.jsx'
+// import Slider2 from './pages/Slider2.jsx'
+// import Slick from './pages/Slick.jsx'
 
 const router = createBrowserRouter([
 	{
@@ -63,9 +66,16 @@ const router = createBrowserRouter([
 			{ path: '/datagridex', element: <DataGridEx /> },
 			{ path: '/sticky', element: <Sticky /> },
 			{ path: '/hover', element: <Hover /> },
-
+			{ path: '/my-slider', element: <MySlider /> },
+			// { path: '/slider2', element: <Slider2 /> },
+			// TODO:
+			// https://www.npmjs.com/package/react-slick
+			// { path: '/slider-x', element: <Slick /> },
 		]
-	}
+	},
+	// {
+	// 	path: '/my-slider-x', element: <MySlider />,
+	// },
 ])
 
 const App = () => {

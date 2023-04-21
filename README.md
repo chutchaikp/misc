@@ -1,5 +1,6 @@
 # Misc
 
+- slider
 - navigation
 - collapse
 - icon

@@ -87,6 +87,15 @@ const Navbar = () => {
           <li>
             <Link to="/hover">Hover</Link>
           </li>
+          <li>
+            <Link to="/my-slider">Slider</Link>
+          </li>
+          {/* <li>
+            <Link to="/slider2">Slider II</Link>
+          </li>
+          <li>
+            <Link to="/slick">Slick</Link>
+          </li> */}
         </ul>
       </div>
     </div>
