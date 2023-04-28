@@ -34,6 +34,7 @@ import Hover from './pages/Hover.jsx'
 import MySlider from './pages/MySlider.jsx'
 // import Slider2 from './pages/Slider2.jsx'
 // import Slick from './pages/Slick.jsx'
+import SliderAxisHorizontal from './pages/sliderAxisHorizontal/SliderAxisHorizontal.jsx'
 
 const router = createBrowserRouter([
 	{
@@ -67,6 +68,7 @@ const router = createBrowserRouter([
 			{ path: '/sticky', element: <Sticky /> },
 			{ path: '/hover', element: <Hover /> },
 			{ path: '/my-slider', element: <MySlider /> },
+			{ path: '/sah', element: <SliderAxisHorizontal />, }
 			// { path: '/slider2', element: <Slider2 /> },
 			// TODO:
 			// https://www.npmjs.com/package/react-slick

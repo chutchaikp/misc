@@ -90,6 +90,9 @@ const Navbar = () => {
           <li>
             <Link to="/my-slider">Slider</Link>
           </li>
+          <li>
+            <Link to="/sah">Slider SAH</Link>
+          </li>
           {/* <li>
             <Link to="/slider2">Slider II</Link>
           </li>
