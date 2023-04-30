@@ -93,12 +93,9 @@ const Navbar = () => {
           <li>
             <Link to="/sah">Slider SAH</Link>
           </li>
-          {/* <li>
-            <Link to="/slider2">Slider II</Link>
-          </li>
           <li>
-            <Link to="/slick">Slick</Link>
-          </li> */}
+            <Link to="/my-slider-responsive">SliderResponsive</Link>
+          </li>
         </ul>
       </div>
     </div>
